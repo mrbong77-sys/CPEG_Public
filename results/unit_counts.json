@@ -1,0 +1,2255 @@
+{
+ "description": "Unit counts behind Tables 1-4 and Figure 3 (input decision): per system, 'all' units or units 'untrained' for CPEG (the same units for every system), 'apr': {benchmark: [harmful units not blocked, harmful units]}, 'orr': {benchmark: [benign units blocked, benign units]}; 'advice' = the benign advice units of MM-SafetyBench and AIR-Bench pooled, its parts under 'advice_parts'. A delegation counts as not blocked; a two-turn conversation is blocked when any turn is blocked.",
+ "systems": {
+  "CPEG": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      6,
+      300
+     ],
+     "xstest": [
+      0,
+      200
+     ],
+     "mmsafetybench": [
+      24,
+      1274
+     ],
+     "airbench": [
+      46,
+      1442
+     ],
+     "wildguardtest": [
+      105,
+      754
+     ],
+     "wildjailbreak": [
+      108,
+      2000
+     ],
+     "taxonomy": [
+      10,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      3,
+      250
+     ],
+     "advice": [
+      9,
+      413
+     ],
+     "wildguardtest": [
+      50,
+      945
+     ],
+     "wildjailbreak": [
+      24,
+      210
+     ],
+     "orbench": [
+      37,
+      1319
+     ],
+     "ethics_cs": [
+      0,
+      1704
+     ],
+     "llm_ethics": [
+      0,
+      77
+     ],
+     "ggb": [
+      7,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      3,
+      406
+     ],
+     "airbench": [
+      6,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      5,
+      131
+     ],
+     "mmsafetybench": [
+      19,
+      568
+     ],
+     "airbench": [
+      36,
+      667
+     ],
+     "wildguardtest": [
+      105,
+      752
+     ],
+     "wildjailbreak": [
+      108,
+      2000
+     ],
+     "taxonomy": [
+      10,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      4,
+      187
+     ],
+     "wildguardtest": [
+      50,
+      945
+     ],
+     "wildjailbreak": [
+      24,
+      210
+     ],
+     "ethics_cs": [
+      0,
+      812
+     ],
+     "llm_ethics": [
+      0,
+      35
+     ],
+     "ggb": [
+      7,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      2,
+      184
+     ],
+     "airbench": [
+      2,
+      3
+     ]
+    }
+   }
+  },
+  "Energy gate only": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      10,
+      300
+     ],
+     "xstest": [
+      0,
+      200
+     ],
+     "mmsafetybench": [
+      29,
+      1274
+     ],
+     "airbench": [
+      52,
+      1442
+     ],
+     "wildguardtest": [
+      117,
+      754
+     ],
+     "wildjailbreak": [
+      139,
+      2000
+     ],
+     "taxonomy": [
+      15,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      2,
+      250
+     ],
+     "advice": [
+      6,
+      413
+     ],
+     "wildguardtest": [
+      47,
+      945
+     ],
+     "wildjailbreak": [
+      21,
+      210
+     ],
+     "orbench": [
+      14,
+      1319
+     ],
+     "ethics_cs": [
+      0,
+      1704
+     ],
+     "llm_ethics": [
+      0,
+      77
+     ],
+     "ggb": [
+      3,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      1,
+      406
+     ],
+     "airbench": [
+      5,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      7,
+      131
+     ],
+     "mmsafetybench": [
+      21,
+      568
+     ],
+     "airbench": [
+      42,
+      667
+     ],
+     "wildguardtest": [
+      117,
+      752
+     ],
+     "wildjailbreak": [
+      139,
+      2000
+     ],
+     "taxonomy": [
+      15,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      3,
+      187
+     ],
+     "wildguardtest": [
+      47,
+      945
+     ],
+     "wildjailbreak": [
+      21,
+      210
+     ],
+     "ethics_cs": [
+      0,
+      812
+     ],
+     "llm_ethics": [
+      0,
+      35
+     ],
+     "ggb": [
+      3,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      1,
+      184
+     ],
+     "airbench": [
+      2,
+      3
+     ]
+    }
+   }
+  },
+  "No probes": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      4,
+      300
+     ],
+     "xstest": [
+      0,
+      200
+     ],
+     "mmsafetybench": [
+      32,
+      1274
+     ],
+     "airbench": [
+      24,
+      1442
+     ],
+     "wildguardtest": [
+      102,
+      754
+     ],
+     "wildjailbreak": [
+      66,
+      2000
+     ],
+     "taxonomy": [
+      5,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      3,
+      250
+     ],
+     "advice": [
+      10,
+      413
+     ],
+     "wildguardtest": [
+      52,
+      945
+     ],
+     "wildjailbreak": [
+      26,
+      210
+     ],
+     "orbench": [
+      31,
+      1319
+     ],
+     "ethics_cs": [
+      0,
+      1704
+     ],
+     "llm_ethics": [
+      1,
+      77
+     ],
+     "ggb": [
+      8,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      4,
+      406
+     ],
+     "airbench": [
+      6,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      3,
+      131
+     ],
+     "mmsafetybench": [
+      25,
+      568
+     ],
+     "airbench": [
+      20,
+      667
+     ],
+     "wildguardtest": [
+      102,
+      752
+     ],
+     "wildjailbreak": [
+      66,
+      2000
+     ],
+     "taxonomy": [
+      5,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      5,
+      187
+     ],
+     "wildguardtest": [
+      52,
+      945
+     ],
+     "wildjailbreak": [
+      26,
+      210
+     ],
+     "ethics_cs": [
+      0,
+      812
+     ],
+     "llm_ethics": [
+      1,
+      35
+     ],
+     "ggb": [
+      8,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      3,
+      184
+     ],
+     "airbench": [
+      2,
+      3
+     ]
+    }
+   }
+  },
+  "8B judge": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      19,
+      300
+     ],
+     "xstest": [
+      7,
+      200
+     ],
+     "mmsafetybench": [
+      475,
+      1274
+     ],
+     "airbench": [
+      215,
+      1442
+     ],
+     "wildguardtest": [
+      127,
+      754
+     ],
+     "wildjailbreak": [
+      266,
+      2000
+     ],
+     "taxonomy": [
+      53,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      61,
+      250
+     ],
+     "advice": [
+      12,
+      413
+     ],
+     "wildguardtest": [
+      293,
+      945
+     ],
+     "wildjailbreak": [
+      120,
+      210
+     ],
+     "orbench": [
+      310,
+      1319
+     ],
+     "ethics_cs": [
+      0,
+      1704
+     ],
+     "llm_ethics": [
+      20,
+      77
+     ],
+     "ggb": [
+      4,
+      90
+     ],
+     "morables": [
+      104,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      8,
+      406
+     ],
+     "airbench": [
+      4,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      12,
+      131
+     ],
+     "mmsafetybench": [
+      199,
+      568
+     ],
+     "airbench": [
+      106,
+      667
+     ],
+     "wildguardtest": [
+      127,
+      752
+     ],
+     "wildjailbreak": [
+      266,
+      2000
+     ],
+     "taxonomy": [
+      53,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      5,
+      187
+     ],
+     "wildguardtest": [
+      293,
+      945
+     ],
+     "wildjailbreak": [
+      120,
+      210
+     ],
+     "ethics_cs": [
+      0,
+      812
+     ],
+     "llm_ethics": [
+      16,
+      35
+     ],
+     "ggb": [
+      4,
+      90
+     ],
+     "morables": [
+      101,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      3,
+      184
+     ],
+     "airbench": [
+      2,
+      3
+     ]
+    }
+   }
+  },
+  "Before the patch": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      7,
+      300
+     ],
+     "xstest": [
+      0,
+      200
+     ],
+     "mmsafetybench": [
+      19,
+      1274
+     ],
+     "airbench": [
+      11,
+      1442
+     ],
+     "wildguardtest": [
+      58,
+      754
+     ],
+     "wildjailbreak": [
+      75,
+      2000
+     ],
+     "taxonomy": [
+      0,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      1,
+      250
+     ],
+     "advice": [
+      8,
+      413
+     ],
+     "wildguardtest": [
+      494,
+      945
+     ],
+     "wildjailbreak": [
+      206,
+      210
+     ],
+     "orbench": [
+      28,
+      1319
+     ],
+     "ethics_cs": [
+      0,
+      1704
+     ],
+     "llm_ethics": [
+      0,
+      77
+     ],
+     "ggb": [
+      0,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      2,
+      406
+     ],
+     "airbench": [
+      6,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      6,
+      131
+     ],
+     "mmsafetybench": [
+      16,
+      568
+     ],
+     "airbench": [
+      10,
+      667
+     ],
+     "wildguardtest": [
+      58,
+      752
+     ],
+     "wildjailbreak": [
+      75,
+      2000
+     ],
+     "taxonomy": [
+      0,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      4,
+      187
+     ],
+     "wildguardtest": [
+      494,
+      945
+     ],
+     "wildjailbreak": [
+      206,
+      210
+     ],
+     "ethics_cs": [
+      0,
+      812
+     ],
+     "llm_ethics": [
+      0,
+      35
+     ],
+     "ggb": [
+      0,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      2,
+      184
+     ],
+     "airbench": [
+      2,
+      3
+     ]
+    }
+   }
+  },
+  "No benchmark items": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      25,
+      300
+     ],
+     "xstest": [
+      7,
+      200
+     ],
+     "mmsafetybench": [
+      344,
+      1274
+     ],
+     "airbench": [
+      162,
+      1442
+     ],
+     "wildguardtest": [
+      117,
+      754
+     ],
+     "wildjailbreak": [
+      143,
+      2000
+     ],
+     "taxonomy": [
+      33,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      17,
+      250
+     ],
+     "advice": [
+      36,
+      413
+     ],
+     "wildguardtest": [
+      49,
+      945
+     ],
+     "wildjailbreak": [
+      27,
+      210
+     ],
+     "orbench": [
+      332,
+      1319
+     ],
+     "ethics_cs": [
+      0,
+      1704
+     ],
+     "llm_ethics": [
+      9,
+      77
+     ],
+     "ggb": [
+      14,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      32,
+      406
+     ],
+     "airbench": [
+      4,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      13,
+      131
+     ],
+     "mmsafetybench": [
+      147,
+      568
+     ],
+     "airbench": [
+      79,
+      667
+     ],
+     "wildguardtest": [
+      117,
+      752
+     ],
+     "wildjailbreak": [
+      143,
+      2000
+     ],
+     "taxonomy": [
+      33,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      14,
+      187
+     ],
+     "wildguardtest": [
+      49,
+      945
+     ],
+     "wildjailbreak": [
+      27,
+      210
+     ],
+     "ethics_cs": [
+      0,
+      812
+     ],
+     "llm_ethics": [
+      9,
+      35
+     ],
+     "ggb": [
+      14,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      14,
+      184
+     ],
+     "airbench": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "Llama Guard 3 8B": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      16,
+      300
+     ],
+     "xstest": [
+      38,
+      200
+     ],
+     "mmsafetybench": [
+      602,
+      1274
+     ],
+     "airbench": [
+      527,
+      1442
+     ],
+     "wildguardtest": [
+      264,
+      754
+     ],
+     "wildjailbreak": [
+      986,
+      2000
+     ],
+     "taxonomy": [
+      100,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      12,
+      250
+     ],
+     "advice": [
+      203,
+      413
+     ],
+     "wildguardtest": [
+      49,
+      945
+     ],
+     "wildjailbreak": [
+      11,
+      210
+     ],
+     "orbench": [
+      204,
+      1319
+     ],
+     "ethics_cs": [
+      170,
+      1704
+     ],
+     "llm_ethics": [
+      0,
+      77
+     ],
+     "ggb": [
+      6,
+      90
+     ],
+     "morables": [
+      1,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      200,
+      406
+     ],
+     "airbench": [
+      3,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      6,
+      131
+     ],
+     "mmsafetybench": [
+      270,
+      568
+     ],
+     "airbench": [
+      252,
+      667
+     ],
+     "wildguardtest": [
+      264,
+      752
+     ],
+     "wildjailbreak": [
+      986,
+      2000
+     ],
+     "taxonomy": [
+      98,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      88,
+      187
+     ],
+     "wildguardtest": [
+      49,
+      945
+     ],
+     "wildjailbreak": [
+      11,
+      210
+     ],
+     "ethics_cs": [
+      73,
+      812
+     ],
+     "llm_ethics": [
+      0,
+      35
+     ],
+     "ggb": [
+      6,
+      90
+     ],
+     "morables": [
+      1,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      88,
+      184
+     ],
+     "airbench": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "Shieldstral-1.0-3B": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      13,
+      300
+     ],
+     "xstest": [
+      35,
+      200
+     ],
+     "mmsafetybench": [
+      445,
+      1274
+     ],
+     "airbench": [
+      374,
+      1442
+     ],
+     "wildguardtest": [
+      126,
+      754
+     ],
+     "wildjailbreak": [
+      133,
+      2000
+     ],
+     "taxonomy": [
+      52,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      5,
+      250
+     ],
+     "advice": [
+      30,
+      413
+     ],
+     "wildguardtest": [
+      48,
+      945
+     ],
+     "wildjailbreak": [
+      13,
+      210
+     ],
+     "orbench": [
+      724,
+      1319
+     ],
+     "ethics_cs": [
+      288,
+      1704
+     ],
+     "llm_ethics": [
+      3,
+      77
+     ],
+     "ggb": [
+      25,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      29,
+      406
+     ],
+     "airbench": [
+      1,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      8,
+      131
+     ],
+     "mmsafetybench": [
+      193,
+      568
+     ],
+     "airbench": [
+      186,
+      667
+     ],
+     "wildguardtest": [
+      126,
+      752
+     ],
+     "wildjailbreak": [
+      133,
+      2000
+     ],
+     "taxonomy": [
+      52,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      11,
+      187
+     ],
+     "wildguardtest": [
+      48,
+      945
+     ],
+     "wildjailbreak": [
+      13,
+      210
+     ],
+     "ethics_cs": [
+      134,
+      812
+     ],
+     "llm_ethics": [
+      3,
+      35
+     ],
+     "ggb": [
+      25,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      11,
+      184
+     ],
+     "airbench": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "NeMo Guardrails": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      43,
+      300
+     ],
+     "xstest": [
+      11,
+      200
+     ],
+     "mmsafetybench": [
+      362,
+      1274
+     ],
+     "airbench": [
+      281,
+      1442
+     ],
+     "wildguardtest": [
+      92,
+      754
+     ],
+     "wildjailbreak": [
+      98,
+      2000
+     ],
+     "taxonomy": [
+      23,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      74,
+      250
+     ],
+     "advice": [
+      77,
+      413
+     ],
+     "wildguardtest": [
+      141,
+      945
+     ],
+     "wildjailbreak": [
+      32,
+      210
+     ],
+     "orbench": [
+      1183,
+      1319
+     ],
+     "ethics_cs": [
+      490,
+      1704
+     ],
+     "llm_ethics": [
+      14,
+      77
+     ],
+     "ggb": [
+      36,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      76,
+      406
+     ],
+     "airbench": [
+      1,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      23,
+      131
+     ],
+     "mmsafetybench": [
+      152,
+      568
+     ],
+     "airbench": [
+      127,
+      667
+     ],
+     "wildguardtest": [
+      92,
+      752
+     ],
+     "wildjailbreak": [
+      98,
+      2000
+     ],
+     "taxonomy": [
+      23,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      38,
+      187
+     ],
+     "wildguardtest": [
+      141,
+      945
+     ],
+     "wildjailbreak": [
+      32,
+      210
+     ],
+     "ethics_cs": [
+      237,
+      812
+     ],
+     "llm_ethics": [
+      1,
+      35
+     ],
+     "ggb": [
+      36,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      38,
+      184
+     ],
+     "airbench": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "WildGuard 7B": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      2,
+      300
+     ],
+     "xstest": [
+      17,
+      200
+     ],
+     "mmsafetybench": [
+      338,
+      1274
+     ],
+     "airbench": [
+      240,
+      1442
+     ],
+     "wildguardtest": [
+      113,
+      754
+     ],
+     "wildjailbreak": [
+      64,
+      2000
+     ],
+     "taxonomy": [
+      5,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      3,
+      250
+     ],
+     "advice": [
+      89,
+      413
+     ],
+     "wildguardtest": [
+      51,
+      945
+     ],
+     "wildjailbreak": [
+      21,
+      210
+     ],
+     "orbench": [
+      976,
+      1319
+     ],
+     "ethics_cs": [
+      594,
+      1704
+     ],
+     "llm_ethics": [
+      18,
+      77
+     ],
+     "ggb": [
+      45,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      88,
+      406
+     ],
+     "airbench": [
+      1,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      1,
+      131
+     ],
+     "mmsafetybench": [
+      144,
+      568
+     ],
+     "airbench": [
+      124,
+      667
+     ],
+     "wildguardtest": [
+      113,
+      752
+     ],
+     "wildjailbreak": [
+      64,
+      2000
+     ],
+     "taxonomy": [
+      5,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      42,
+      187
+     ],
+     "wildguardtest": [
+      51,
+      945
+     ],
+     "wildjailbreak": [
+      21,
+      210
+     ],
+     "ethics_cs": [
+      296,
+      812
+     ],
+     "llm_ethics": [
+      14,
+      35
+     ],
+     "ggb": [
+      45,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      42,
+      184
+     ],
+     "airbench": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "Qwen3Guard-8B strict": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      3,
+      300
+     ],
+     "xstest": [
+      7,
+      200
+     ],
+     "mmsafetybench": [
+      374,
+      1274
+     ],
+     "airbench": [
+      227,
+      1442
+     ],
+     "wildguardtest": [
+      96,
+      754
+     ],
+     "wildjailbreak": [
+      105,
+      2000
+     ],
+     "taxonomy": [
+      10,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      31,
+      250
+     ],
+     "advice": [
+      44,
+      413
+     ],
+     "wildguardtest": [
+      55,
+      945
+     ],
+     "wildjailbreak": [
+      25,
+      210
+     ],
+     "orbench": [
+      1027,
+      1319
+     ],
+     "ethics_cs": [
+      426,
+      1704
+     ],
+     "llm_ethics": [
+      2,
+      77
+     ],
+     "ggb": [
+      31,
+      90
+     ],
+     "morables": [
+      2,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      43,
+      406
+     ],
+     "airbench": [
+      1,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      2,
+      131
+     ],
+     "mmsafetybench": [
+      159,
+      568
+     ],
+     "airbench": [
+      114,
+      667
+     ],
+     "wildguardtest": [
+      96,
+      752
+     ],
+     "wildjailbreak": [
+      105,
+      2000
+     ],
+     "taxonomy": [
+      10,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      18,
+      187
+     ],
+     "wildguardtest": [
+      55,
+      945
+     ],
+     "wildjailbreak": [
+      25,
+      210
+     ],
+     "ethics_cs": [
+      217,
+      812
+     ],
+     "llm_ethics": [
+      1,
+      35
+     ],
+     "ggb": [
+      31,
+      90
+     ],
+     "morables": [
+      2,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      18,
+      184
+     ],
+     "airbench": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "Qwen3Guard-8B loose": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      12,
+      300
+     ],
+     "xstest": [
+      34,
+      200
+     ],
+     "mmsafetybench": [
+      501,
+      1274
+     ],
+     "airbench": [
+      441,
+      1442
+     ],
+     "wildguardtest": [
+      145,
+      754
+     ],
+     "wildjailbreak": [
+      298,
+      2000
+     ],
+     "taxonomy": [
+      80,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      3,
+      250
+     ],
+     "advice": [
+      21,
+      413
+     ],
+     "wildguardtest": [
+      37,
+      945
+     ],
+     "wildjailbreak": [
+      13,
+      210
+     ],
+     "orbench": [
+      507,
+      1319
+     ],
+     "ethics_cs": [
+      96,
+      1704
+     ],
+     "llm_ethics": [
+      0,
+      77
+     ],
+     "ggb": [
+      6,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      20,
+      406
+     ],
+     "airbench": [
+      1,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      8,
+      131
+     ],
+     "mmsafetybench": [
+      210,
+      568
+     ],
+     "airbench": [
+      215,
+      667
+     ],
+     "wildguardtest": [
+      145,
+      752
+     ],
+     "wildjailbreak": [
+      298,
+      2000
+     ],
+     "taxonomy": [
+      78,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      10,
+      187
+     ],
+     "wildguardtest": [
+      37,
+      945
+     ],
+     "wildjailbreak": [
+      13,
+      210
+     ],
+     "ethics_cs": [
+      47,
+      812
+     ],
+     "llm_ethics": [
+      0,
+      35
+     ],
+     "ggb": [
+      6,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      10,
+      184
+     ],
+     "airbench": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "Jev (vendor recipe)": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      89,
+      300
+     ],
+     "xstest": [
+      52,
+      200
+     ],
+     "mmsafetybench": [
+      685,
+      1274
+     ],
+     "airbench": [
+      609,
+      1442
+     ],
+     "wildguardtest": [
+      275,
+      754
+     ],
+     "wildjailbreak": [
+      502,
+      2000
+     ],
+     "taxonomy": [
+      186,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      3,
+      250
+     ],
+     "advice": [
+      10,
+      413
+     ],
+     "wildguardtest": [
+      61,
+      945
+     ],
+     "wildjailbreak": [
+      25,
+      210
+     ],
+     "orbench": [
+      413,
+      1319
+     ],
+     "ethics_cs": [
+      40,
+      1704
+     ],
+     "llm_ethics": [
+      0,
+      77
+     ],
+     "ggb": [
+      0,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      9,
+      406
+     ],
+     "airbench": [
+      1,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      38,
+      131
+     ],
+     "mmsafetybench": [
+      303,
+      568
+     ],
+     "airbench": [
+      290,
+      667
+     ],
+     "wildguardtest": [
+      275,
+      752
+     ],
+     "wildjailbreak": [
+      502,
+      2000
+     ],
+     "taxonomy": [
+      183,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      5,
+      187
+     ],
+     "wildguardtest": [
+      61,
+      945
+     ],
+     "wildjailbreak": [
+      25,
+      210
+     ],
+     "ethics_cs": [
+      24,
+      812
+     ],
+     "llm_ethics": [
+      0,
+      35
+     ],
+     "ggb": [
+      0,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      5,
+      184
+     ],
+     "airbench": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "Jev (τ = 0.5)": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      4,
+      300
+     ],
+     "xstest": [
+      17,
+      200
+     ],
+     "mmsafetybench": [
+      501,
+      1274
+     ],
+     "airbench": [
+      343,
+      1442
+     ],
+     "wildguardtest": [
+      127,
+      754
+     ],
+     "wildjailbreak": [
+      62,
+      2000
+     ],
+     "taxonomy": [
+      10,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      13,
+      250
+     ],
+     "advice": [
+      11,
+      413
+     ],
+     "wildguardtest": [
+      69,
+      945
+     ],
+     "wildjailbreak": [
+      27,
+      210
+     ],
+     "orbench": [
+      850,
+      1319
+     ],
+     "ethics_cs": [
+      265,
+      1704
+     ],
+     "llm_ethics": [
+      0,
+      77
+     ],
+     "ggb": [
+      5,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      11,
+      406
+     ],
+     "airbench": [
+      0,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      3,
+      131
+     ],
+     "mmsafetybench": [
+      215,
+      568
+     ],
+     "airbench": [
+      165,
+      667
+     ],
+     "wildguardtest": [
+      127,
+      752
+     ],
+     "wildjailbreak": [
+      62,
+      2000
+     ],
+     "taxonomy": [
+      10,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      3,
+      187
+     ],
+     "wildguardtest": [
+      69,
+      945
+     ],
+     "wildjailbreak": [
+      27,
+      210
+     ],
+     "ethics_cs": [
+      146,
+      812
+     ],
+     "llm_ethics": [
+      0,
+      35
+     ],
+     "ggb": [
+      5,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      3,
+      184
+     ],
+     "airbench": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "Jev (τ = 0.86)": {
+   "all": {
+    "apr": {
+     "harmbench": [
+      39,
+      300
+     ],
+     "xstest": [
+      41,
+      200
+     ],
+     "mmsafetybench": [
+      649,
+      1274
+     ],
+     "airbench": [
+      595,
+      1442
+     ],
+     "wildguardtest": [
+      309,
+      754
+     ],
+     "wildjailbreak": [
+      752,
+      2000
+     ],
+     "taxonomy": [
+      98,
+      800
+     ]
+    },
+    "orr": {
+     "xstest": [
+      0,
+      250
+     ],
+     "advice": [
+      1,
+      413
+     ],
+     "wildguardtest": [
+      9,
+      945
+     ],
+     "wildjailbreak": [
+      0,
+      210
+     ],
+     "orbench": [
+      74,
+      1319
+     ],
+     "ethics_cs": [
+      32,
+      1704
+     ],
+     "llm_ethics": [
+      0,
+      77
+     ],
+     "ggb": [
+      0,
+      90
+     ],
+     "morables": [
+      0,
+      800
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      1,
+      406
+     ],
+     "airbench": [
+      0,
+      7
+     ]
+    }
+   },
+   "untrained": {
+    "apr": {
+     "harmbench": [
+      21,
+      131
+     ],
+     "mmsafetybench": [
+      284,
+      568
+     ],
+     "airbench": [
+      284,
+      667
+     ],
+     "wildguardtest": [
+      309,
+      752
+     ],
+     "wildjailbreak": [
+      752,
+      2000
+     ],
+     "taxonomy": [
+      97,
+      787
+     ]
+    },
+    "orr": {
+     "advice": [
+      1,
+      187
+     ],
+     "wildguardtest": [
+      9,
+      945
+     ],
+     "wildjailbreak": [
+      0,
+      210
+     ],
+     "ethics_cs": [
+      23,
+      812
+     ],
+     "llm_ethics": [
+      0,
+      35
+     ],
+     "ggb": [
+      0,
+      90
+     ],
+     "morables": [
+      0,
+      793
+     ]
+    },
+    "advice_parts": {
+     "mmsafetybench": [
+      1,
+      184
+     ],
+     "airbench": [
+      0,
+      3
+     ]
+    }
+   }
+  }
+ }
+}

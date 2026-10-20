@@ -1,0 +1,302 @@
+{
+ "description": "Paired comparisons of two ablations with CPEG on the same units (input decision, all units): exact two-sided McNemar on the blocked flag (a two-turn conversation is blocked when any turn is blocked; a delegation counts as not blocked); a_only = units blocked by the ablation only, b_only = by CPEG only; Holm over the benchmarks of one comparison and side; 'advice' = the advice units of MM-SafetyBench (406) and AIR-Bench (7) pooled (its parts under 'parts').",
+ "reference": "CPEG",
+ "paired": {
+  "before_patch_vs_CPEG": {
+   "a": "Before the patch",
+   "b": "CPEG",
+   "harmful": {
+    "per_bench": {
+     "harmbench": {
+      "n": 300,
+      "a_only": 2,
+      "b_only": 3,
+      "p": 1.0,
+      "p_holm": 1.0
+     },
+     "xstest": {
+      "n": 200,
+      "a_only": 0,
+      "b_only": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+     },
+     "mmsafetybench": {
+      "n": 1274,
+      "a_only": 11,
+      "b_only": 6,
+      "p": 0.332305908203125,
+      "p_holm": 0.996917724609375
+     },
+     "airbench": {
+      "n": 1442,
+      "a_only": 37,
+      "b_only": 2,
+      "p": 2.841261448338628e-09,
+      "p_holm": 1.9888830138370395e-08
+     },
+     "wildguardtest": {
+      "n": 754,
+      "a_only": 68,
+      "b_only": 21,
+      "p": 5.986670828041249e-07,
+      "p_holm": 3.5920024968247494e-06
+     },
+     "wildjailbreak": {
+      "n": 2000,
+      "a_only": 88,
+      "b_only": 55,
+      "p": 0.0072366685838441665,
+      "p_holm": 0.028946674335376666
+     },
+     "taxonomy": {
+      "n": 800,
+      "a_only": 10,
+      "b_only": 0,
+      "p": 0.001953125,
+      "p_holm": 0.009765625
+     }
+    },
+    "pooled": {
+     "n": 6770,
+     "a_only": 216,
+     "b_only": 87,
+     "p": 8.120506797475681e-14
+    }
+   },
+   "benign": {
+    "per_bench": {
+     "xstest": {
+      "n": 250,
+      "a_only": 1,
+      "b_only": 3,
+      "p": 0.625,
+      "p_holm": 1.0
+     },
+     "advice": {
+      "n": 413,
+      "a_only": 0,
+      "b_only": 1,
+      "parts": {
+       "mmsafetybench": {
+        "n": 406,
+        "a_only": 0,
+        "b_only": 1
+       },
+       "airbench": {
+        "n": 7,
+        "a_only": 0,
+        "b_only": 0
+       }
+      },
+      "p": 1.0,
+      "p_holm": 1.0
+     },
+     "wildguardtest": {
+      "n": 945,
+      "a_only": 445,
+      "b_only": 1,
+      "p": 4.9199359919431494e-132,
+      "p_holm": 4.4279423927488345e-131
+     },
+     "wildjailbreak": {
+      "n": 210,
+      "a_only": 182,
+      "b_only": 0,
+      "p": 3.2626522339992623e-55,
+      "p_holm": 2.61012178719941e-54
+     },
+     "orbench": {
+      "n": 1319,
+      "a_only": 16,
+      "b_only": 25,
+      "p": 0.21102359760880063,
+      "p_holm": 1.0
+     },
+     "ethics_cs": {
+      "n": 1704,
+      "a_only": 0,
+      "b_only": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+     },
+     "llm_ethics": {
+      "n": 77,
+      "a_only": 0,
+      "b_only": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+     },
+     "ggb": {
+      "n": 90,
+      "a_only": 0,
+      "b_only": 7,
+      "p": 0.015625,
+      "p_holm": 0.109375
+     },
+     "morables": {
+      "n": 800,
+      "a_only": 0,
+      "b_only": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+     }
+    },
+    "pooled": {
+     "n": 5808,
+     "a_only": 644,
+     "b_only": 37,
+     "p": 3.8053347714905757e-144
+    }
+   }
+  },
+  "no_probes_vs_CPEG": {
+   "a": "No probes",
+   "b": "CPEG",
+   "harmful": {
+    "per_bench": {
+     "harmbench": {
+      "n": 300,
+      "a_only": 2,
+      "b_only": 0,
+      "p": 0.5,
+      "p_holm": 1.0
+     },
+     "xstest": {
+      "n": 200,
+      "a_only": 0,
+      "b_only": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+     },
+     "mmsafetybench": {
+      "n": 1274,
+      "a_only": 0,
+      "b_only": 8,
+      "p": 0.0078125,
+      "p_holm": 0.0390625
+     },
+     "airbench": {
+      "n": 1442,
+      "a_only": 22,
+      "b_only": 0,
+      "p": 4.76837158203125e-07,
+      "p_holm": 2.86102294921875e-06
+     },
+     "wildguardtest": {
+      "n": 754,
+      "a_only": 5,
+      "b_only": 2,
+      "p": 0.453125,
+      "p_holm": 1.0
+     },
+     "wildjailbreak": {
+      "n": 2000,
+      "a_only": 44,
+      "b_only": 2,
+      "p": 3.0752289603697136e-11,
+      "p_holm": 2.1526602722587995e-10
+     },
+     "taxonomy": {
+      "n": 800,
+      "a_only": 5,
+      "b_only": 0,
+      "p": 0.0625,
+      "p_holm": 0.25
+     }
+    },
+    "pooled": {
+     "n": 6770,
+     "a_only": 78,
+     "b_only": 12,
+     "p": 5.202430003083186e-13
+    }
+   },
+   "benign": {
+    "per_bench": {
+     "xstest": {
+      "n": 250,
+      "a_only": 0,
+      "b_only": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+     },
+     "advice": {
+      "n": 413,
+      "a_only": 1,
+      "b_only": 0,
+      "parts": {
+       "mmsafetybench": {
+        "n": 406,
+        "a_only": 1,
+        "b_only": 0
+       },
+       "airbench": {
+        "n": 7,
+        "a_only": 0,
+        "b_only": 0
+       }
+      },
+      "p": 1.0,
+      "p_holm": 1.0
+     },
+     "wildguardtest": {
+      "n": 945,
+      "a_only": 2,
+      "b_only": 0,
+      "p": 0.5,
+      "p_holm": 1.0
+     },
+     "wildjailbreak": {
+      "n": 210,
+      "a_only": 2,
+      "b_only": 0,
+      "p": 0.5,
+      "p_holm": 1.0
+     },
+     "orbench": {
+      "n": 1319,
+      "a_only": 1,
+      "b_only": 7,
+      "p": 0.0703125,
+      "p_holm": 0.6328125
+     },
+     "ethics_cs": {
+      "n": 1704,
+      "a_only": 0,
+      "b_only": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+     },
+     "llm_ethics": {
+      "n": 77,
+      "a_only": 1,
+      "b_only": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+     },
+     "ggb": {
+      "n": 90,
+      "a_only": 1,
+      "b_only": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+     },
+     "morables": {
+      "n": 800,
+      "a_only": 0,
+      "b_only": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+     }
+    },
+    "pooled": {
+     "n": 5808,
+     "a_only": 8,
+     "b_only": 7,
+     "p": 1.0
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,13 @@
+Benchmark,Side,Harmful units,Benign units,Untrained harmful,Untrained benign,In CPEG's training pool
+HarmBench,harmful,300,—,131,—,about half of its items
+XSTest,harmful + benign,200,250,0,0,all items
+MM-SafetyBench,harmful + benign,1274,406,568,184,about half of its items
+AIR-Bench,harmful + benign,1442,7,667,3,about half of its items
+WildGuardTest,harmful + benign,754,945,752,945,training split only
+WildJailbreak,harmful + benign,2000,210,2000,210,training split only
+Two-turn attacks,harmful,800,—,787,—,HarmBench items
+OR-Bench-Hard,benign,—,1319,—,0,all items
+ETHICS-cs,benign,—,1704,—,812,"training split, some items"
+LLM Ethics,benign,—,77,—,35,some items
+GGB,benign,—,90,—,90,no evaluated item
+MORABLES,benign,—,800,—,793,fable texts

@@ -1,0 +1,61 @@
+{
+ "thresholds": {
+  "lo": 0.05784,
+  "hi": 0.736825,
+  "rule": "lo = 1st percentile of harmful p, hi = 95th percentile of safe p, on confident half B of the head's fit pool"
+ },
+ "routing": "p >= hi -> block; p < lo -> pass; otherwise delegate",
+ "piece_calibration": {
+  "a": 0.6507,
+  "b": 0.0792,
+  "form": "sigmoid(a * logit(s) + b)"
+ },
+ "piece_hot_threshold": 0.26094,
+ "substance_hot_threshold": 0.5,
+ "head": {
+  "model": "sklearn HistGradientBoostingClassifier(max_iter=200, learning_rate=0.1, max_leaf_nodes=15, random_state=42)",
+  "fit_rows": "confident rows (y <= 0.2 or y >= 0.8) of half A",
+  "features": [
+   "core",
+   "req_max",
+   "req_mean",
+   "mat_max",
+   "n_req",
+   "n_mat",
+   "n_frame",
+   "has_frame",
+   "mixed",
+   "has_decoded",
+   "has_joined",
+   "core_is_whole",
+   "pair_max",
+   "deframed_max",
+   "clause_max",
+   "all_max",
+   "top2",
+   "hot",
+   "frame_max",
+   "s_core",
+   "s_max",
+   "s_top2",
+   "s_mean",
+   "s_hot",
+   "s_frame_max"
+  ]
+ },
+ "head_fit_features": "gate1_head_fit.csv.gz",
+ "classifiers": {
+  "piece_classifier": {
+   "encoder": "microsoft/deberta-v3-large",
+   "max_tokens": 256,
+   "truncation": "head + tail",
+   "pooling": "[CLS]"
+  },
+  "substance_classifier": {
+   "encoder": "microsoft/deberta-v3-base",
+   "max_tokens": 256,
+   "truncation": "head + tail",
+   "pooling": "[CLS]"
+  }
+ }
+}

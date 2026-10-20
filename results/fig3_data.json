@@ -1,0 +1,207 @@
+{
+ "description": "Data of Figure 3 (mean ORR against mean APR, input decisions, all units). 'CPEG' and 'Before the patch': per-benchmark counts on the seven harmful benchmarks (apr: [not blocked, units]) and the nine benign benchmarks (orr: [blocked, units]; 'advice' = the advice units of MM-SafetyBench and AIR-Bench pooled); the arrow of the figure goes from 'Before the patch' to 'CPEG'. 'systems' and 'ablations': mean ORR and mean APR as fractions (unrounded means of the per-benchmark rates). The weight-tuned defences of the figure are judged on final answers and are not included.",
+ "CPEG": {
+  "apr": {
+   "harmbench": [
+    6,
+    300
+   ],
+   "xstest": [
+    0,
+    200
+   ],
+   "mmsafetybench": [
+    24,
+    1274
+   ],
+   "airbench": [
+    46,
+    1442
+   ],
+   "wildguardtest": [
+    105,
+    754
+   ],
+   "wildjailbreak": [
+    108,
+    2000
+   ],
+   "taxonomy": [
+    10,
+    800
+   ]
+  },
+  "orr": {
+   "xstest": [
+    3,
+    250
+   ],
+   "advice": [
+    9,
+    413
+   ],
+   "wildguardtest": [
+    50,
+    945
+   ],
+   "wildjailbreak": [
+    24,
+    210
+   ],
+   "orbench": [
+    37,
+    1319
+   ],
+   "ethics_cs": [
+    0,
+    1704
+   ],
+   "llm_ethics": [
+    0,
+    77
+   ],
+   "ggb": [
+    7,
+    90
+   ],
+   "morables": [
+    0,
+    800
+   ]
+  }
+ },
+ "Before the patch": {
+  "apr": {
+   "harmbench": [
+    7,
+    300
+   ],
+   "xstest": [
+    0,
+    200
+   ],
+   "mmsafetybench": [
+    19,
+    1274
+   ],
+   "airbench": [
+    11,
+    1442
+   ],
+   "wildguardtest": [
+    58,
+    754
+   ],
+   "wildjailbreak": [
+    75,
+    2000
+   ],
+   "taxonomy": [
+    0,
+    800
+   ]
+  },
+  "orr": {
+   "xstest": [
+    1,
+    250
+   ],
+   "advice": [
+    8,
+    413
+   ],
+   "wildguardtest": [
+    494,
+    945
+   ],
+   "wildjailbreak": [
+    206,
+    210
+   ],
+   "orbench": [
+    28,
+    1319
+   ],
+   "ethics_cs": [
+    0,
+    1704
+   ],
+   "llm_ethics": [
+    0,
+    77
+   ],
+   "ggb": [
+    0,
+    90
+   ],
+   "morables": [
+    0,
+    800
+   ]
+  }
+ },
+ "systems": {
+  "CPEG": {
+   "mean_orr": 0.034090762970639725,
+   "mean_apr": 0.03949939109693624
+  },
+  "Llama Guard 3 8B": {
+   "mean_orr": 0.10734475289373784,
+   "mean_apr": 0.2927797234729178
+  },
+  "Shieldstral-1.0-3B": {
+   "mean_orr": 0.13777680238455245,
+   "mean_apr": 0.16079966392204798
+  },
+  "NeMo Guardrails": {
+   "mean_orr": 0.283366270150148,
+   "mean_apr": 0.12530170200168939
+  },
+  "WildGuard 7B": {
+   "mean_orr": 0.2448641017846867,
+   "mean_apr": 0.10164652419461183
+  },
+  "Qwen3Guard-8B strict": {
+   "mean_orr": 0.20103609385850182,
+   "mean_apr": 0.09832925483404087
+  },
+  "Qwen3Guard-8B loose": {
+   "mean_orr": 0.07458805124203519,
+   "mean_apr": 0.1929117917944944
+  },
+  "Jev (vendor recipe)": {
+   "mean_orr": 0.061822348225507966,
+   "mean_apr": 0.33784212261005236
+  },
+  "Jev (τ = 0.5)": {
+   "mean_orr": 0.1261912520331628,
+   "mean_apr": 0.13448314740016537
+  },
+  "Jev (τ = 0.86)": {
+   "mean_orr": 0.009647507574259306,
+   "mean_apr": 0.309336405015289
+  }
+ },
+ "ablations": {
+  "Energy gate only": {
+   "mean_orr": 0.02402341441080199,
+   "mean_apr": 0.04793996068758645
+  },
+  "No probes": {
+   "mean_orr": 0.037825289921979054,
+   "mean_apr": 0.03280330542139708
+  },
+  "8B judge": {
+   "mean_orr": 0.20263871233253392,
+   "mean_apr": 0.14113689502959162
+  },
+  "Before the patch": {
+   "mean_orr": 0.17203359632626228,
+   "mean_apr": 0.022899766009038845
+  },
+  "No benchmark items": {
+   "mean_orr": 0.09552609564841624,
+   "mean_apr": 0.10980220177520895
+  }
+ }
+}

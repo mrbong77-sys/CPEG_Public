@@ -1,0 +1,50 @@
+{
+ "cpeg": {
+  "bands": {
+   "theta_del": 0.2209414126371152,
+   "theta_block": 3.774135257074935,
+   "theta_release": 0.2209414126371152,
+   "q_block": 0.98,
+   "q_del": 0.95,
+   "q_release": "harm_min",
+   "theta_low": 0.2209414126371152,
+   "q_low": 0.95
+  },
+  "summary": {
+   "theta_block": 3.7741,
+   "theta_del": 0.2209,
+   "theta_low": 0.2209,
+   "theta_release": 0.2209
+  },
+  "selection_record": {
+   "theta_block": 3.774135257074935,
+   "theta_del": 0.2209414126371152,
+   "theta_release_before_band_rule": -7.415279518804635,
+   "q_block": 0.98,
+   "q_del": 0.95,
+   "q_release": "harm_min"
+  },
+  "note": "theta_block is the 98th percentile and theta_low the 95th percentile of the generic benign validation energy (out-of-fold, 5 folds). The grid search recorded theta_release = -7.4153 (below every benchmark-harmful training energy); the band rule then sets theta_release := theta_low (inside the band a Gate1 block stands), so the deployed bands carry theta_release = theta_low = theta_del = 0.2209 and the -7.4153 value has no effect on any decision. g1_low_block is absent: below theta_low the request passes whatever Gate1 says."
+ },
+ "ablation_no_probes": {
+  "bands": {
+   "theta_del": -2.8886616230010986,
+   "theta_block": 2.4675374031066757,
+   "theta_release": -2.8886616230010986,
+   "q_block": 0.98,
+   "q_del": 0.95,
+   "q_release": "harm_min",
+   "theta_low": -2.8886616230010986,
+   "q_low": 0.95
+  },
+  "selection_record": {
+   "theta_block": 2.4675374031066757,
+   "theta_del": -2.8886616230010986,
+   "theta_release_before_band_rule": -7.972208499908447
+  },
+  "note": "No probes: the same fine-tuned encoder as CPEG, E = s0 (the request's logit alone, no probes, no head), bands chosen by the same rule (98th / 95th percentile of the generic benign validation logit, theta_release := theta_low)."
+ },
+ "ablation_energy_gate_only": {
+  "rule": "block if E >= cpeg.bands.theta_block, else pass"
+ }
+}

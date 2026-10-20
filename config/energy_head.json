@@ -1,0 +1,48 @@
+{
+ "description": "Logistic energy head of CPEG: E = w_text*s0 + sum_i w_probe_i*(s_i - s0) + intercept; s = fine-tuned DeBERTa-v3-large logit.",
+ "feature_order": [
+  "w_text",
+  "w_malice_added",
+  "w_trigger_masked",
+  "w_benign_reason",
+  "w_object_swap",
+  "w_protective"
+ ],
+ "feature_meaning": {
+  "w_text": "s0, logit of the request",
+  "w_malice_added": "s1 - s0, request + malicious intent",
+  "w_trigger_masked": "s2 - s0, trigger words masked",
+  "w_benign_reason": "s3 - s0, harmless reason prefixed",
+  "w_object_swap": "s4 - s0, people replaced by 'a computer program'",
+  "w_protective": "s5 - s0, protective reframing"
+ },
+ "weights": {
+  "w_text": 1.1958,
+  "w_malice_added": 0.5104,
+  "w_trigger_masked": 0.0978,
+  "w_benign_reason": -0.3181,
+  "w_object_swap": 0.1115,
+  "w_protective": 0.231
+ },
+ "intercept": -2.2636,
+ "precision_note": "Weights as committed (4 decimals). The deployed head kept full precision; with 4-decimal weights E can differ by about 1e-3, which matters only for requests within that distance of a threshold.",
+ "fit": {
+  "rule": "logistic regression, lbfgs, C 1, class_weight balanced, sample weight = row weight, fitted on the validation split (out-of-fold logits, 5 folds, seed 42, for the bands)",
+  "n_pool": 108897,
+  "n_val": 8853,
+  "validation_auroc": 0.991,
+  "validation_auroc_text_logit_only": 0.9929
+ },
+ "encoder": {
+  "model": "microsoft/deberta-v3-large",
+  "max_len": 512,
+  "lr": 1e-05,
+  "batch": "8 x 4 accumulation (effective 32)",
+  "epochs": 2,
+  "seed": 42,
+  "training_rows": 100044,
+  "optimiser_steps": 6253,
+  "rows_mode": "each unique row once, loss weighted by its repeat weight and label balance",
+  "validation_auroc_of_its_logit": 0.9929
+ }
+}

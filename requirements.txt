@@ -1,0 +1,14 @@
+# metrics, table checks, Gate1 head (no GPU)
+numpy
+pandas
+scikit-learn
+# inference (Gate1 classifiers, energy encoder, mpnet overlap filter)
+torch
+transformers
+safetensors
+huggingface_hub
+sentencepiece
+protobuf
+# building the benchmark units (gated WildGuardTest / WildJailbreak, AIR-Bench parquet)
+datasets
+pyarrow
